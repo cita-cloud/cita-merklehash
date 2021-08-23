@@ -1,0 +1,19 @@
+[package]
+name = "cita-merklehash"
+version = "0.1.0"
+authors = ["Rivtower Technologies <contact@rivtower.com>"]
+description = "Provide merkle tree construction method"
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
+cita-types = "0.1"
+hashable = { package = "cita-hashable", version = "0.1" }
+rlp = "0.5.1"
+static_merkle_tree = "1.1.0"
+
+[features]
+default = []
+sha3hash = ["hashable/sha3hash"]
+blake2bhash = ["hashable/blake2bhash"]
+sm3hash = ["hashable/sm3hash"]
